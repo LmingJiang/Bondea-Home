@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 35 42% 94%;
+  --surface: 34 36% 88%;
+  --surface-soft: 35 50% 97%;
+  --text: 28 24% 18%;
+  --muted: 28 12% 45%;
+  --stroke: 32 22% 78%;
+  --accent: 28 48% 55%;
+  --accent-soft: 30 55% 82%;
+  --cream: 40 60% 96%;
+  --linen: 36 34% 84%;
+  --coffee: 28 30% 38%;
+  --sage: 102 15% 58%;
+  --font-body: "Inter", sans-serif;
+  --font-display: "Instrument Serif", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 18% 12%, hsl(var(--accent-soft) / 0.18), transparent 26rem),
+    radial-gradient(circle at 82% 18%, hsl(var(--sage) / 0.14), transparent 24rem),
+    hsl(var(--bg));
+  color: hsl(var(--text));
+  font-family: var(--font-body);
+}
+
+body::before {
+  background-image:
+    radial-gradient(hsl(var(--coffee) / 0.18) 0.6px, transparent 0.6px),
+    linear-gradient(90deg, hsl(var(--cream) / 0.45) 1px, transparent 1px);
+  background-size: 6px 6px, 28px 28px;
+  content: "";
+  inset: 0;
+  opacity: 0.055;
+  pointer-events: none;
+  position: fixed;
+  z-index: 100;
+}
+
+img {
+  display: block;
+}
+
+.accent-gradient {
+  background: linear-gradient(90deg, #d9b88f 0%, #b98b63 45%, #f1d9b5 100%);
+  background-size: 200% 200%;
+}
+
+.fabric-overlay {
+  background-image:
+    radial-gradient(hsl(var(--cream) / 0.18) 1px, transparent 1px),
+    linear-gradient(135deg, hsl(var(--cream) / 0.12) 25%, transparent 25%);
+  background-size: 7px 7px, 18px 18px;
+  opacity: 0.28;
+}
+
+::selection {
+  background: hsl(var(--accent-soft));
+  color: hsl(var(--text));
+}
