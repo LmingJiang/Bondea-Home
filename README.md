@@ -1,2 +1,2 @@
-# CozyNest
-The website of the Company CozyNest.
+# Bondea Home
+The website of the Company Bondea Home.
